@@ -21,7 +21,6 @@ public class Ctrl : MonoBehaviour {
 	void Update () {
 		foreach (var code in Enum.GetValues(typeof(KeyCode))) {
 			if(Input.GetKeyDown((KeyCode)code)) {
-				Debug.Log (code);
 				if(buttons.ContainsKey((KeyCode)code)){
 					buttons[(KeyCode)code].KeyDown();
 				}
