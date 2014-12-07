@@ -12,6 +12,8 @@ public class Creature : MonoBehaviour {
 	bool running;
 	public Transform bubble;
 
+	public Transform scaleRoot;
+
 	public ScoreType scoreType;
 	public int points;
 
@@ -22,7 +24,21 @@ public class Creature : MonoBehaviour {
 		}
 	}
 
+	public void Pop(){
+		if(bubble){
+			Destroy(bubble.gameObject);
+			scaleRoot.localScale = new Vector3(10,10,10);
+			if(popSound){
+				popSound.pitch = 0.5f;
+				popSound.Play();
+			}
+		}
+	}
+
 	public void Update(){
+		if(bubble && Static.Score.popBubbles){
+			Static.Score.RegisterForPopping(this);
+		}
 		if(target == null){
 			transform.Translate(dir * speed * Time.deltaTime);
 			return;
@@ -34,9 +50,13 @@ public class Creature : MonoBehaviour {
 	}
 
 	public IEnumerator GetSuckedUp(float duration){
+		if(bubble == null){
+			yield break;
+		}
 		float dt = 1/duration;
 		float t = 0;
 		Destroy(bubble.gameObject);
+		scaleRoot.localScale = new Vector3(1,1,1);
 		if(popSound) popSound.Play();
 		while(t < 1){
 			t+=dt*Time.smoothDeltaTime * suckspeed;
@@ -51,5 +71,6 @@ public class Creature : MonoBehaviour {
 
 public enum ScoreType{
 	win,
+	life,
 	lose
 }

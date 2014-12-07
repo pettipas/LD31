@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 public class Catcher : MonoBehaviour {
@@ -11,7 +12,10 @@ public class Catcher : MonoBehaviour {
 	public AudioSource suckingNoise;
 	bool activated;
 
+	public List<AudioClip> notes = new List<AudioClip>();
+
 	public void Awake(){
+		suckingNoise.clip = notes.GetRandomElement();
 		particles.enableEmission = false;
 	}
 

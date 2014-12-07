@@ -54,6 +54,8 @@
      <Compile Include="Assets\Ctrl.cs" />
      <Compile Include="Assets\Detector.cs" />
      <Compile Include="Assets\GameOver.cs" />
+     <Compile Include="Assets\GameStart.cs" />
+     <Compile Include="Assets\GizmoScript.cs" />
      <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
      <Compile Include="Assets\Score.cs" />
      <Compile Include="Assets\Spawner.cs" />
@@ -137,11 +139,11 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="SixBySeven">
- <HintPath>/Users/pettipas/LD31/LD31/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
- </Reference>
  <Reference Include="ProCore">
  <HintPath>/Users/pettipas/LD31/LD31/Assets/ProCore/Shared/Code/ProCore.dll</HintPath>
+ </Reference>
+ <Reference Include="SixBySeven">
+ <HintPath>/Users/pettipas/LD31/LD31/Assets/ProCore/Shared/Code/SixBySeven.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

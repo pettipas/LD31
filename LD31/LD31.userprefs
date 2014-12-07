@@ -1,19 +1,21 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Score.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameStart.cs">
     <Files>
-      <File FileName="Assets/Static.cs" Line="30" Column="1" />
+      <File FileName="Assets/Static.cs" Line="22" Column="1" />
       <File FileName="Assets/Creature.cs" Line="1" Column="1" />
       <File FileName="Assets/Ctrl.cs" Line="1" Column="1" />
       <File FileName="Assets/Button.cs" Line="1" Column="1" />
-      <File FileName="Assets/Catcher.cs" Line="1" Column="1" />
+      <File FileName="Assets/Catcher.cs" Line="20" Column="23" />
       <File FileName="Assets/Spawner.cs" Line="1" Column="1" />
       <File FileName="Assets/Tumble.cs" Line="1" Column="1" />
       <File FileName="Assets/Spin.cs" Line="1" Column="1" />
       <File FileName="Assets/CloudSpawner.cs" Line="1" Column="1" />
       <File FileName="Assets/Cloud.cs" Line="1" Column="1" />
-      <File FileName="Assets/Score.cs" Line="40" Column="4" />
-      <File FileName="Assets/Detector.cs" Line="9" Column="1" />
+      <File FileName="Assets/Score.cs" Line="1" Column="1" />
+      <File FileName="Assets/Detector.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameOver.cs" Line="1" Column="1" />
+      <File FileName="Assets/GameStart.cs" Line="6" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

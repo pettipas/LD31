@@ -9,6 +9,9 @@ public class Spawner : MonoBehaviour {
 	public List<GameObject> goodOnes = new List<GameObject>();
 	public List<GameObject> badOnes = new List<GameObject>();
 
+
+
+
 	public IEnumerator Start(){
 		yield return new WaitForSeconds(Random.Range(1,15));
 		GameObject creature = (GameObject)Instantiate(Choose(),transform.position,Quaternion.identity);
@@ -19,6 +22,11 @@ public class Spawner : MonoBehaviour {
 	public IEnumerator Spawn(){
 		yield return new WaitForSeconds(Random.Range(6,15));
 		GameObject creature = (GameObject)Instantiate(Choose(),transform.position,Quaternion.identity);
+		if(Time.time > 100 &&  Time.time <=300){
+			creature.GetComponent<Creature>().speed+=1f;
+		}else if(Time.time > 300 &&  Time.time <=500){
+			creature.GetComponent<Creature>().speed+=2f;
+		}
 		creature.GetComponent<Creature>().dir = transform.forward;
 		StartCoroutine(Spawn());
 	}
