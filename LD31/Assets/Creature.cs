@@ -12,8 +12,11 @@ public class Creature : MonoBehaviour {
 	bool running;
 	public Transform bubble;
 
+	public ScoreType scoreType;
+	public int points;
+
 	public void Awake(){
-		float val = Random.Range(2,4);
+		float val = Random.Range(2,4.3f);
 		if(bubble){
 			bubble.localScale += new Vector3(val,val,val);
 		}
@@ -40,8 +43,13 @@ public class Creature : MonoBehaviour {
 			transform.position = Vector3.Lerp(transform.position, target.position,t);
 			yield return 1;
 		}
-
+		Static.Score.ScorePoints(scoreType,points);
 		Destroy(gameObject);
 	}
 	
+}
+
+public enum ScoreType{
+	win,
+	lose
 }
