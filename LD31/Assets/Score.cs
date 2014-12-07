@@ -39,7 +39,9 @@ public class Score : MonoBehaviour {
 
 	public void RegisterForPopping (Creature creature)
 	{
-		creatures.Add(creature);
+		if(!creatures.Contains(creature)){
+			creatures.Add(creature);
+		}
 	}
 
 	public void ExtraLife() {
@@ -72,6 +74,7 @@ public class Score : MonoBehaviour {
 	public IEnumerator TimeSlow(){
 		popBubbles = true;
 		yield return null;
+		Static.PlayerPiano.DoEndTune();
 		yield return StartCoroutine(PopAll());
 		gameisover = true;
 		gameOver.text = "G A M E O V E R";

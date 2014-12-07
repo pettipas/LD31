@@ -14,7 +14,8 @@ public class Catcher : MonoBehaviour {
 
 	public List<AudioClip> notes = new List<AudioClip>();
 
-	public void Awake(){
+	public void Start(){
+		Static.PlayerPiano.RegisterCatcher(this);
 		suckingNoise.clip = notes.GetRandomElement();
 		particles.enableEmission = false;
 	}
