@@ -57,13 +57,13 @@ public class Creature : MonoBehaviour {
 		float t = 0;
 		Destroy(bubble.gameObject);
 		scaleRoot.localScale = new Vector3(1,1,1);
+		Static.Score.ScorePoints(scoreType,points);
 		if(popSound) popSound.Play();
 		while(t < 1){
 			t+=dt*Time.smoothDeltaTime * suckspeed;
 			transform.position = Vector3.Lerp(transform.position, target.position,t);
 			yield return 1;
 		}
-		Static.Score.ScorePoints(scoreType,points);
 		Destroy(gameObject);
 	}
 	

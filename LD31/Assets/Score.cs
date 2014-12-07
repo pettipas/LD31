@@ -49,7 +49,7 @@ public class Score : MonoBehaviour {
 	}
 
 	public void Failure() {
-		lives--;
+		lives-=5;
 		loseLife.Play();
 	}
 
