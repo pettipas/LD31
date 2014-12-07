@@ -17,6 +17,7 @@ public class Catcher : MonoBehaviour {
 
 	public IEnumerator DoEffect(){
 		particles.enableEmission = true;
+		suckingNoise.Play();
 		yield return new WaitForSeconds(2.0f);
 		particles.enableEmission = false;
 		activated = false;
