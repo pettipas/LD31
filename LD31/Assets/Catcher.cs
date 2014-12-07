@@ -7,6 +7,7 @@ public class Catcher : MonoBehaviour {
 	public float radius;
 	public AudioSource wrongButton;
 	public ParticleSystem particles;
+	public Transform target;
 	bool activated;
 
 	public void Awake(){
@@ -15,18 +16,23 @@ public class Catcher : MonoBehaviour {
 
 	public IEnumerator DoEffect(){
 		particles.enableEmission = true;
+		yield return new WaitForSeconds(2.0f);
+		particles.enableEmission = false;
+		activated = false;
+	}
+
+	public void Update(){
+		if(!activated){
+			return;
+		}
 
 		Collider[] colliders = Physics.OverlapSphere(transform.position,radius);
 		colliders.ToList().ForEach(x=>{
 			Creature creature = x.GetComponent<Creature>();
 			if(creature != null){
-				Destroy(creature.gameObject);
+				creature.target = target;
 			}
 		});
-
-		yield return new WaitForSeconds(2.0f);
-		particles.enableEmission = false;
-		activated = false;
 	}
 
 	public void Activate(){

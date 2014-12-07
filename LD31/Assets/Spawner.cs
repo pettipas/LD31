@@ -4,14 +4,17 @@ using System.Collections;
 public class Spawner : MonoBehaviour {
 
 	public GameObject prefab;
-	public void Awake(){
+	public IEnumerator Start(){
+		yield return new WaitForSeconds(Random.Range(1,15));
+		GameObject creature = (GameObject)Instantiate(prefab,transform.position,Quaternion.identity);
+		creature.GetComponent<Creature>().dir = transform.forward;
 		StartCoroutine(Spawn());
 	}
 
 	public IEnumerator Spawn(){
+		yield return new WaitForSeconds(Random.Range(6,15));
 		GameObject creature = (GameObject)Instantiate(prefab,transform.position,Quaternion.identity);
 		creature.GetComponent<Creature>().dir = transform.forward;
-		yield return new WaitForSeconds(Random.Range(6,8));
 		StartCoroutine(Spawn());
 	}
 

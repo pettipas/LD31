@@ -12,6 +12,7 @@ public class Button : MonoBehaviour {
 		go.transform.parent = transform;
 		go.transform.localPosition = Vector3.zero;
 		catcher = go.GetComponentInChildren<Catcher>();
+		renderer.enabled = false;
 	}
 
 	public void Update(){
@@ -20,10 +21,10 @@ public class Button : MonoBehaviour {
 
 	public void KeyDown(){
 		catcher.Activate();
-		transform.position+=new Vector3(0,1,0);
+		transform.position += new Vector3(0,0.5f,0);
 	}
 
 	public void KeyUp(){
-		transform.position+=new Vector3(0,-1,0);
+		transform.position += new Vector3(0,-0.5f,0);
 	}
 }
