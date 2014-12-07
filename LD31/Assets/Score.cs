@@ -87,7 +87,6 @@ public class Score : MonoBehaviour {
 			creatures[i].Pop();
 			yield return new WaitForSeconds(0.08f);
 		}
-		Debug.Log ("done");
 		yield return null;
 	}
 
