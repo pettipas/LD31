@@ -1,22 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Creature.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../DRL/DRL/Assets/_Controls/PacMan.cs">
     <Files>
-      <File FileName="Assets/Static.cs" Line="22" Column="1" />
-      <File FileName="Assets/Creature.cs" Line="56" Column="1" />
-      <File FileName="Assets/Ctrl.cs" Line="1" Column="1" />
-      <File FileName="Assets/Button.cs" Line="1" Column="1" />
-      <File FileName="Assets/Catcher.cs" Line="18" Column="48" />
-      <File FileName="Assets/Spawner.cs" Line="18" Column="1" />
-      <File FileName="Assets/Tumble.cs" Line="1" Column="1" />
-      <File FileName="Assets/Spin.cs" Line="1" Column="1" />
-      <File FileName="Assets/CloudSpawner.cs" Line="1" Column="1" />
-      <File FileName="Assets/Cloud.cs" Line="1" Column="1" />
-      <File FileName="Assets/Score.cs" Line="67" Column="23" />
-      <File FileName="Assets/Detector.cs" Line="1" Column="1" />
-      <File FileName="Assets/GameOver.cs" Line="1" Column="1" />
-      <File FileName="Assets/GameStart.cs" Line="6" Column="2" />
-      <File FileName="Assets/GizmoScript.cs" Line="10" Column="1" />
+      <File FileName="../../DRL/DRL/Assets/_Controls/GestureControl.cs" Line="80" Column="1" />
+      <File FileName="../../DRL/DRL/Assets/_Controls/PacMan.cs" Line="17" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
